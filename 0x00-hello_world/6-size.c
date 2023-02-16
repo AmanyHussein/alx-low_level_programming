@@ -1,8 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main-Entry 
- * invoke program 
- * returns 0 (true)
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
