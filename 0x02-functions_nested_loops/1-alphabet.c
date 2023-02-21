@@ -1,8 +1,7 @@
-#include<unistd.h>
 #include"main.h"
 
 /**
- * print_alphabet:Check description
+ * print_alphabet-Check description
  * Description: prints the alphabet, in lowercase, followed by a new line
  * Return: nothing.
  */
