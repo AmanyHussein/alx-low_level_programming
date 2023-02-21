@@ -17,6 +17,7 @@ int _isalpha(int c)
                 if (c == alpha1)
                         letter = 1;
         }
+
 	for (alpha2 = 'A'; alpha2 <= 'Z'; alpha2++)
 	{
 		if (c == alpha2)
