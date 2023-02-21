@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * print_alphabet_x10-Check description 
+ * print_alphabet_x10 - Check description 
  * Description: prints 10 times the alphabet, in lowercase, followed by a new line.
  * Return: nothing.
  */
@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 	{
 		char alpha;
 
-		for( alpha= 'a'; alpha <= 'z'; alpha++)
+		for (alpha = 'a'; alpha <= 'z'; alpha++)
 			_putchar(alpha);
 		_putchar('\n');
 	}
