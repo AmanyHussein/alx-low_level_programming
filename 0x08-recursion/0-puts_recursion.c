@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - check the description
- * @ *s- array of characters
+ * @s- array of characters
  * description: prints a string, followed by a new line.
  * Return: nothing.
  */
