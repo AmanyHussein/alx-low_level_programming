@@ -1,11 +1,11 @@
 #include"main.h"
 #include <stdlib.h>
 
-/*
- * create array- creates  an array of chars, and initializes it with a specific char.
- * @size:function paramters an integer
- * @c: function paramter a chracter
- * Return: a single character
+/**
+ * create_array - create an array of chars, and initialize with specific char
+ * @size: size of array
+ * @c: specific char
+ * Return: char pointer to malloc created memory address or NULL if error
  */
 
 char *create_array(unsigned int size, char c)
@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-	
+
 	ar = malloc(size * sizeof(*ar));
 	if (ar == NULL)
 		return (NULL);
