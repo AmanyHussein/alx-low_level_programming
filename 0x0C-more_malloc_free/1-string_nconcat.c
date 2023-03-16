@@ -12,52 +12,38 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *con;
-       	int size1, size2, size;
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	int c = 0;
+	int c, counter1;
 	int flag = n;
+	char *ptr;
+	int len1, len2;
 
 	if (s1 == NULL)
 		s1 = "";
-
-	while (s1[i] != '\0')
-	{
-		i++;
-		size1++;
-	}
-
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s2[j] != '\0')
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+		;
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+		;
+
+	if (flag >= len2)
 	{
-		if (j <= flag)
-		{
-			j++;
-			size2++;
-		}
+		flag = len2;
+		ptr = malloc(sizeof(char) * (len1 + len2 + 1));
 	}
-
-	size = size1 + size2 + 1;
-	con = malloc(size * sizeof(char));
-
-	if (con == NULL)
+	else
+		ptr = malloc(sizeof(char) * (len1 + n + 1));
+	if (ptr == NULL)
 		return (NULL);
-
-	for (k = 0; k <= size1; k++)
+	for (c = 0; c < len1; c++)
 	{
-		con[k] = s1[k];
+		ptr[c] = s1[c];
 	}
-
-	for (c = 0; c < flag; c++)
+	for (counter1 = 0; counter1 < flag; counter1++)
 	{
-		con[k++] = s2[c];
+		ptr[c++] = s2[counter1];
 	}
-	con[k++] = '\0';
-
-	return (con);
-
+	ptr[c++] = '\0';
+	return (ptr);
 }
