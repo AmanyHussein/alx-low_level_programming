@@ -18,11 +18,15 @@ size_t print_list(const list_t *h)
 		{
 			printf("[0] (nil)\n");
 			current = current-> next;
+			i++;
 		}
-		printf("[%d]", current->len);
-		printf("%s\n", current->str);
-		current = current->next;
-		i++;
+		else
+		{
+			printf("[%d]", current->len);
+			printf("%s\n", current->str);
+			current = current->next;
+			i++;
+		}
 	}
 
 	return (i);
